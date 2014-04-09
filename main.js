@@ -39,10 +39,18 @@ while(addNewVol) {
 	addNewVol = confirm("Do you want to add a volunteer?");
 }
 
+// this is the # of char in the last name entered.
+// bc vicName is a string  
+// vicName.length-1
+
 // Challenge - if only 1, change people to person
-alert("There are " + numVictim + " victim(s)" + "\n" +
-	"And " + numVolunteer + " volunteers." + "\n" +
-	"Specifically, " + vicInfo[0].name + " is in need of help ");
+alert("There are " + vicInfo.length + " victim(s)" + "\n" +
+	"And " + volInfo.length + " volunteer(s)." );
+	// "Specifically, " +  + " is in need of help ");
 
+var checkVicMatch = prompt("Find a volunteer for a specific victim." + "\n" +
+	"Enter the name of a person in need");
 
-
+if(checkVicMatch === volStreet) {
+	alert(volName + " is available on the same street")
+}
